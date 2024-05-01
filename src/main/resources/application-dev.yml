@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://db.newlecture.com/wallaby856db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: wallaby856
+    password: plick0727
+
+logging:
+  level:
+    kr.co.doby.web.repository: trace

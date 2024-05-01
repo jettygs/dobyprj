@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://db.doby.co.kr/jihye?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: jihye
+    password: wallabygood
+
+logging:
+  level:
+    kr.co.doby.web.repository: trace

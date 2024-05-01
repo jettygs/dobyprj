@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.doby.web.repository.NoticeRepository">
+
+    <select id="findAll" resultType="NoticeView">
+        select * from notice_view
+        <where>
+            <if test="query != null">title like '%${query}%' || content like '%${query}%'</if>
+        </where>
+        order by ${filterName} desc
+    </select>
+
+    <select id="findById" resultType="NoticeView">
+        select * from notice_view where id = #{id};
+    </select>
+
+    <insert id="save" parameterType="NoticeView">
+        insert into notice_view (title, content, member_id)
+        values(#{title}, #{content}, #{memberId})
+    </insert>
+
+    <update id="update" parameterType="NoticeView">
+        update notice_view
+        set title = #{title},
+        content = #{content}
+        where id = #{id};
+    </update>
+
+    <delete id="removeById">
+        delete from notice
+        where id = #{id};
+    </delete>
+
+    <select id="findOrderByHits" resultType="NoticeView">
+        select * from notice_view order by hit desc
+    </select>
+
+    <select id="last" resultType="NoticeView">
+        select * from notice order by id desc limit 1
+    </select>
+
+    <update id="updateHit" parameterType="Long">
+        update notice n set n.hit = n.hit + 1 where n.id = #{id};
+    </update>
+
+</mapper>

@@ -1,0 +1,145 @@
+.aside{
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000070;
+
+    z-index: 1000;
+}
+
+.user-aside {
+    position: fixed;
+    right: 0;
+
+    width: 280px;
+    height: 100%;
+
+    font-size: 16px;
+    color: var(--color-base-7);
+    background-color: var(--color-base-white);
+
+    z-index: 1000;
+}
+
+
+/* 회원정보 */
+
+.user-aside
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr 0.5fr;
+    align-items: center;
+
+    border-bottom: 1px solid var(--color-base-1);
+
+    padding: 30px 30px 30px 20px;
+}
+
+.user-aside
+.welcome-user {
+    font-weight: 600;
+}
+
+.user-aside
+.welcome-user::after {
+    content: '님';
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.user-aside
+.welcome .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+
+    margin-top: 5px;
+
+    order: -1;
+}
+
+.user-aside
+.welcome .user-img img {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+
+    object-fit: cover;
+    object-position: bottom center;
+}
+
+.user-aside
+.close {
+    width: 20px;
+    height: 20px;
+
+    justify-self: end;
+}
+
+
+/* 리스트 간격 조정 */
+.user-aside
+.liststyle {
+    border-bottom: 1px solid var(--color-base-1);
+}
+
+.user-aside ul {
+    margin: 30px 0px;
+}
+
+.user-aside ul li {
+    margin: 20px;
+}
+
+.user-aside
+.mypage-list{
+    border-bottom: none;
+}
+
+
+/* hover */
+.user-aside
+.board-list li:nth-child(1):hover {
+    color: var(--color-main-2);
+}
+
+.user-aside
+.board-list li:nth-child(2):hover {
+    color: var(--color-main-0);
+}
+
+.user-aside
+.board-list li:nth-child(3):hover {
+    color: var(--color-main-3);
+}
+
+
+/* active */
+.user-aside
+.community.active {
+    color: var(--color-main-2);
+    font-weight: 600;
+}
+
+.user-aside
+.with.active {
+    color: var(--color-main-0);
+    font-weight: 600;
+}
+
+.user-aside
+.smalltalk.active {
+    color: var(--color-main-3);
+    font-weight: 600;
+}
+
+.user-aside
+.notice.active {
+    font-weight: 600;
+}
+
+.user-aside
+.mypage.active {
+    font-weight: 600;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{inc/layout.html}">
+<head>
+  <meta charset="UTF-8">
+  <title>DOBY!</title>
+</head>
+<body>
+<main class="join-page" layout:fragment="main">
+도비 <span style="color: red">어드민</span>페이지
+  <form action="/logout" method="post">
+  <input type="submit">로그아웃
+  <input type="hidden"
+         th:name="${_csrf.parameterName}"
+         th:value="${_csrf.token}">
+  </form>
+</main>
+</body>
+</html>

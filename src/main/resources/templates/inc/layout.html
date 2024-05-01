@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/css/root.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/icon.css" rel="stylesheet" type="text/css">
+    <link href="/css/utils.css" rel="stylesheet" type="text/css">
+
+    <link href="/css/components/header/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/components/footer/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/components/user/user-aside.css" rel="stylesheet" type="text/css" />
+    <script src="/js/header/header.js"></script>
+
+</head>
+<body>
+
+
+<div th:replace="~{inc/header::.header}"></div>  <!--  div를 header로 replace -->
+<div layout:fragment="main">
+    이 내용이 나오면 안됩니다
+</div>
+<div th:replace="~{inc/footer::.footer}"></div>
+
+
+</body>
+</html>
